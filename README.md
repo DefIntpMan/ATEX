@@ -9,4 +9,4 @@
 - attack_explain.py `function attack_explanation_random()` : Visualization of Adversarial attack on interpretation
 - attack_explain.py `function explanation_random()` : Visualization saliency map of ATEX model and Baseline model
 
-### we have clear code annotations for you to understand the code.
+we have clear code annotations to help you to understand the code.
