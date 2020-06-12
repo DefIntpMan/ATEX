@@ -101,14 +101,4 @@ def explain_random(org_model, new_model, loader, args, DEVICE, log_dir, model_di
     ax3.imshow(np.abs(np.squeeze(intp_arr)))  # (28, 28, 1) -> (28, 28)
     ax3.title.set_text('ATEX model sensitive map')
 
-    # show clean smoothed explanation
-    intp = org_explainer.generate_smoothgrad(img, label, DEVICE, args.iter_smoothgrad, args.epsilon_smooth)
-    intp = torch.abs(intp)
-    intp_arr = intp.data.cpu().numpy()[0]
-    intp_arr = np.transpose(intp_arr, (1, 2, 0))  # shape of the image should be height * width * channels
-    intp_arr = intp_arr.clip(min=0)
-    ax4 = fig.add_subplot(2, 2, 4)
-    plt.imshow(np.abs(np.squeeze(intp_arr)))  # (28, 28, 1) -> (28, 28)
-    ax4.title.set_text('org model smoothgrad map')
-
     plt.show()
