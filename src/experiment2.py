@@ -81,21 +81,17 @@ def main(args):
 
     
 
-    '''
     # Evaluate model robustness before and after defense
     metric1_org, metric2_org = attack_explanation(model_org, [train_loader, valid_loader, test_loader],
                                     args, DEVICE, log_dir, model_dir, 'org')
     metric1_new, metric2_new = attack_explanation(model_new, [train_loader, valid_loader, test_loader],
                                     args, DEVICE, log_dir, model_dir, 'new')
-    '''
 
-    '''
     # compare model attention maps with SmoothGrad before and after defense
     metric1_org, metric2_org = compare_explanation(model_org, [train_loader, valid_loader, test_loader],
                                                   args, DEVICE, log_dir, model_dir, 'org')
     metric1_new, metric2_new = compare_explanation(model_new, [train_loader, valid_loader, test_loader],
                                                   args, DEVICE, log_dir, model_dir, 'new')
-    '''
     
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
