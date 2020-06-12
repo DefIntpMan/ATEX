@@ -1,3 +1,2 @@
 # ATEX_code
-1. Please run the test cases (which are commented) in the main.py file first. 
-2. Please run the ATEX part and attack evaluation to get familar with the codes.
+1. Please run the src/experiment2.py to reproduce the experiment results
